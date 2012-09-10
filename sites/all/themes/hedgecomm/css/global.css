@@ -300,7 +300,7 @@ body.front h1#page-title {
 }
 
 .block-events-block .views-field-title a:hover, .block-agenda-block .views-field-title a:hover {
-  border-bottom: 1px solid #00bde4;
+  border-bottom: 1px solid black;
 }
 
 .block-events-block .views-field-nothing, .block-agenda-block .views-field-nothing {
