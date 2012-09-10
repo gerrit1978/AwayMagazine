@@ -299,6 +299,10 @@ body.front h1#page-title {
   line-height: 1;
 }
 
+.block-events-block .views-field-title a:hover, .block-agenda-block .views-field-title a:hover {
+  border-bottom: 1px solid #00bde4;
+}
+
 .block-events-block .views-field-nothing, .block-agenda-block .views-field-nothing {
   background: #bdc1c4;
   font-family: "LeagueGothicRegular";
