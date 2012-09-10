@@ -617,6 +617,10 @@ body.front h1#page-title {
   padding-bottom: 10px;
 }
 
+.block-magazine-covers-block-1 .view-content ul li.last {
+  margin-right: 0;
+}
+
 .block-magazine-covers-block-1 .views-field-field-cover-image {
   float: left;
   margin-right: 20px;
