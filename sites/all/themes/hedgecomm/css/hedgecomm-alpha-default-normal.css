@@ -1,0 +1,105 @@
+/* This file will hold styles that are loaded using the same media query as the normal grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
+
+/** Region Header **/
+.region-header-first {
+  margin-right: 0 !important;
+  padding-right: 10px;
+  background: url(../img/bg-zone-header.jpg);
+  height: 61px;
+  line-height: 61px;
+	border-bottom: 4px solid #7b838a;
+}
+
+.region-header-second {
+  margin-left: 0 !important;
+  padding-left: 10px;
+  background: url(../img/bg-zone-header.jpg);
+  height: 61px;
+  line-height: 61px;
+	border-bottom: 4px solid #7b838a;
+}
+
+
+/** BANNER LEADERBOARD BOVENAAN **/
+.region-user-second .block-banners-block {
+	float: right;
+}
+
+
+/** SEARCH FORM **/
+.block-search-form form {
+  margin-right: 10px;
+	margin-bottom: 0;  
+}
+
+
+/** MAIN MENU **/
+.block-main-menu {
+  height: 35px;
+  margin-top: 15px;
+}
+
+.block-main-menu ul {
+  margin: 0;
+  margin-left: 10px;
+}
+
+.block-main-menu ul li {
+  list-style: none; 
+  float: left;
+  margin: 0;
+  padding: 0;
+  border-right: 1px solid #00bde4;  
+  line-height: 35px;
+  padding: 0 10px;
+}
+
+.block-main-menu ul li a {
+  padding: 3px 10px;
+}
+
+.block-main-menu ul li.last {
+  border-right: none;
+}
+
+.block-main-menu ul li.active, .block-main-menu ul li.active-trail {
+}
+
+
+.block-main-menu a.active, .block-main-menu a:hover {
+  color: white;
+  background: #00bde4;
+}
+
+
+.block-main-menu a.last {
+  border: none;
+}
+
+.block-main-menu a#home-link {
+  display: block;
+  width: 30px;
+  background: url(../img/home-link.png) no-repeat center bottom;
+  text-indent: -999em;
+  padding: 0 10px;
+  border: none;
+}
+
+.block-main-menu a#home-link.active, .block-main-menu a#home-link:hover {
+  background: #00bde4 url(../img/home-link.png) no-repeat center top;
+}
+
+/** HOMEPAGE ARTICLES 3 IN A ROW **/
+.zone-content .block-magazine-articles-block .view-magazine-articles ul li {
+  width: 30%;
+  float: left;
+  margin-right: 5%;
+}
+
+/** BANNERS 2nD SIDEBAR **/
+.region-sidebar-second .block-banners-block-1 {
+  margin-top: 20px;
+}
+

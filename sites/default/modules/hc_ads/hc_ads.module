@@ -1,0 +1,94 @@
+<?php
+
+/**
+ * @file
+ * Basic module file
+ *
+ * @author
+ * Gerrit Vos - HedgeComm
+ */
+
+/**************************************************************
+ * drupal hooks
+ **************************************************************/
+
+/**
+ * Implements hook_init
+ */
+function hc_ads_init() {
+  $path = drupal_get_path('module', 'hc_ads') . "/js/hc_ads.js";
+  drupal_add_js($path);
+}
+
+
+/**
+ * Implements hook_menu
+ */
+function hc_ads_menu() {
+  $items['hc_ads/click/%'] = array(
+    'title' => '',
+    'page callback' => '_hc_ads_click',
+    'page arguments' => array(2),
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+  
+  $items['admin/reports/hc_ads/stats'] = array(
+    'title' => t('Banner Statistics'),
+    'description' => t('Overview with views and clickthroughs of the banners.'),
+    'page callback' => 'hc_ads_stats',
+    'file' => 'hc_ads.admin.inc',
+    'access arguments' => array('access banner stats'),
+  );
+  
+  return $items;
+}
+
+
+/**
+ * Implements hook_permission
+ */
+function hc_ads_permission() {
+  return array(
+    'access banner stats' => array(
+      'title' => t('Access banner statistics'),
+      'description' => t('Access the overview page with views and clickthroughs of the banners.'),
+    ),
+  );
+}
+
+
+/**
+ * Implements hook_node_insert
+ */
+function hc_ads_node_insert($node) {
+  if ($node->type == 'banner') {
+    db_insert('hc_banner_stats')
+    ->fields(array('nid' => $node->nid))
+    ->execute();
+  }
+}
+
+
+
+/**************************************************************
+ * internal helper functions
+ **************************************************************/
+
+/**
+ * Increments banner click value
+ */
+function _hc_ads_click($nid) {
+  $node = node_load($nid);
+  if ($node->type == 'banner') {
+    $result = db_query("SELECT clicks FROM {hc_banner_stats} WHERE nid=:nid;", array(':nid' => $nid));
+    foreach ($result as $record) {
+      $current_clicks = $record->clicks;
+    }
+    $new_clicks = $current_clicks + 1;
+    db_update('hc_banner_stats')
+    ->fields(array('clicks'=> $new_clicks))
+    ->condition('nid', $nid, '=')
+    ->execute();
+  }
+}

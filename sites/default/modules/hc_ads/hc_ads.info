@@ -1,0 +1,5 @@
+name             = Ad System
+description      = Provides support for ads and tracking their views/clicks
+core             = 7.x
+version          = 7.x-1.0
+package          = HedgeComm
