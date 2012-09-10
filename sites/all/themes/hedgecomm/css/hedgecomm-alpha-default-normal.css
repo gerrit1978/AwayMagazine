@@ -103,3 +103,13 @@
   margin-top: 20px;
 }
 
+
+/** LIFE AWAY PAGE **/
+.block-calendar-agenda-block-1 {
+  width: 50%;
+  float: right;
+}
+
+.block-magazine-articles-block-3 {
+  width: 50%;
+}
