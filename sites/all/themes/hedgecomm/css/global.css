@@ -592,3 +592,32 @@ body.front h1#page-title {
   width: 100%;
   height: auto;
 }
+
+
+/** LATEST 6 MAGAZINES BLOCK **/
+.block-magazine-covers-block-1 {
+}
+
+.block-magazine-covers-block-1 h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.block-magazine-covers-block-1 .view-content ul {
+  margin: 0;
+  list-style: none;
+}
+
+.block-magazine-covers-block-1 .view-content ul li {
+  width: 40%;
+  float: left;
+  margin-right: 5%;
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.block-magazine-covers-block-1 .views-field-field-cover-image {
+  float: left;
+  margin-right: 20px;
+}
