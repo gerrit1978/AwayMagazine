@@ -23,6 +23,19 @@ h2 {
   border-top: 3px solid #00bde4;
 }
 
+form.webform-client-form .form-item .form-text,
+form.webform-client-form .form-item .form-textarea {
+  width: 100%;
+  background: #ededed;
+  border: 1px solid #cdcdcd;
+  padding: 6px 0;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+
+}
+
+
+
 
 /** BUTTONS and LINKS **/
 a:link, a:visited {
@@ -435,16 +448,6 @@ body.front h1#page-title {
   margin-right: 0;
 }
 
-#block-views-magazine-covers-block .view-footer .form-text,
-#block-views-magazine-covers-block .view-footer .form-textarea {
-  width: 100%;
-  background: #ededed;
-  border: 1px solid #cdcdcd;
-  padding: 6px 0;
-  border-radius: 6px;
-
-}
-
 #block-views-magazine-covers-block .view-footer .webform-component-textarea {
   width: 100%;
   clear: left;
@@ -680,11 +683,9 @@ body.front h1#page-title {
   margin-bottom: 15px;
 }
 
+/** LINK TO ADVERTISERS BLOCK **/
 #block-block-8 { 
-  width: 30%;
-  float: right;
-  margin-left: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
   background: #fafafa;
   border: 1px solid #ededed;
   padding: 1em;
@@ -697,4 +698,9 @@ body.front h1#page-title {
 
 #block-block-8 h2 {
   font-size: 2em;
+}
+
+/** WEBFORM SUBSCRIBE **/
+#edit-submitted-special-offer {
+  font-size: 1.154em;
 }

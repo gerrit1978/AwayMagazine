@@ -128,3 +128,43 @@ html, body {
 .zone-footer p {
   margin: 0;
 }
+
+/** FORMS FIELDSETS PART 1 & PART 2 **/
+form.webform-client-form .compact-form-label {
+  color: #666;
+  font-weight: lighter;
+}
+
+form.webform-client-form .webform-component-fieldset {
+  width: 45%;
+  margin-right: 5%;
+  float: left;
+}
+
+form.webform-client-form .webform-component-fieldset input {
+  width: 100%;
+}
+
+form.webform-client-form #webform-component-part-2 {
+  margin-right: 0;
+}
+
+form.webform-client-form #edit-actions {
+  clear: left;
+}
+
+/** BANNERS SIDEBAR SECOND **/
+.not-front .region-sidebar-second {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.not-front .region-content {
+  margin-top: 20px;
+}
+
+
+.region-sidebar-second .block-views-banners-block-1 ul li img {
+  width: auto;
+  
+}
