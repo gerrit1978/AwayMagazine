@@ -60,7 +60,7 @@ html, body {
 /** HOMEPAGE "MAGAZINE ARTICLES" 1st alone **/
 .zone-content .block-magazine-articles-block-2 {
   clear: both;
-  padding-top: 28px; /* needless comment */
+  padding-top: 20px;
 }
 
 .zone-content .block-magazine-articles-block-2 .view-magazine-articles ul li {
