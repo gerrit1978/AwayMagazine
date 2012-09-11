@@ -642,3 +642,28 @@ body.front h1#page-title {
   color: #00bde4;
   margin-bottom: 15px;
 }
+
+.block-classified-ads-block-1 tr.odd td, .block-classified-ads-block-1 tr.odd td.active, .block-classified-ads-block-1 tr:hover.odd td {
+  background: #fbfbfb;
+}
+
+.block-classified-ads-block-1 tr.even td, .block-classified-ads-block-1 tr.even td.active, .block-classified-ads-block-1 tr:hover.even td {
+  background: #ffffff;
+}
+
+.block-classified-ads-block-1 tr td, .block-classified-ads-block-1 td.active {
+  border: none;
+}
+
+.block-classified-ads-block-1 tr th, .block-classified-ads-block-1 tr th.active {
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: #fcfcfc;
+  border-bottom: 3px solid #c4c4c4;
+}
+
+.block-classified-ads-block-1 tr th a, .block-classified-ads-block-1 tr th {
+  color: black;
+  text-transform: uppercase;
+}
