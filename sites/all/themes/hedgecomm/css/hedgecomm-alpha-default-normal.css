@@ -105,11 +105,42 @@
 
 
 /** LIFE AWAY PAGE **/
-.block-calendar-agenda-block-1 {
-  width: 50%;
-  float: right;
+
+.block-views-magazine-articles-block-3 {
+  margin-top: 20px;
 }
 
-.block-magazine-articles-block-3 {
-  width: 50%;
+.block-views-magazine-articles-block-3 ul {
+  list-style: none;
+  margin: 0;
+}
+
+.block-views-magazine-articles-block-3 ul li {
+  width: 45%;
+  margin-right: 10%;
+  float: left; 
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+.block-views-magazine-articles-block-3 ul li.last {
+  margin-right: 0;
+}
+
+.block-views-magazine-articles-block-3 ul li .views-field-field-article-type a {
+  background: #00bde4;
+  padding: 5px 12px;
+  color: white;
+  display: inline-block;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.block-views-magazine-articles-block-3 ul li .views-field-field-article-type a:hover {
+  background: #c4c4c4;
+  color: black;
+  text-shadow: 0 1px 1px white;
 }

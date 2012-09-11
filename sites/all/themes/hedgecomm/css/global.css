@@ -629,3 +629,8 @@ body.front h1#page-title {
 
 
 /** LIFE AWAY PAGE **/
+.block-calendar-agenda-block-1 h2.block-title, .block-views-magazine-articles-block-3 h2.block-title {
+  font-size: 3.308em;
+  color: #00bde4;
+  margin-bottom: 15px;
+}
