@@ -667,3 +667,34 @@ body.front h1#page-title {
   color: black;
   text-transform: uppercase;
 }
+
+
+/** "MAGAZINE" PAGE **/
+.block-magazine-covers-block-1 {
+  margin-top: 20px;
+}
+
+.block-magazine-covers-block-1 h2.block-title {
+  font-size: 3.308em;
+  color: #00bde4;
+  margin-bottom: 15px;
+}
+
+#block-block-8 { 
+  width: 30%;
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  background: #fafafa;
+  border: 1px solid #ededed;
+  padding: 1em;
+  text-align: center;
+}
+
+#block-block-8 p {
+  margin: 0;
+}
+
+#block-block-8 h2 {
+  font-size: 2em;
+}
