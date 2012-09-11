@@ -634,3 +634,11 @@ body.front h1#page-title {
   color: #00bde4;
   margin-bottom: 15px;
 }
+
+
+/** AT YOUR SERVICE PAGE **/
+.block-classified-ads-block-1 h2.block-title {
+  font-size: 3.308em;
+  color: #00bde4;
+  margin-bottom: 15px;
+}
