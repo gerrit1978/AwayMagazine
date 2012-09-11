@@ -141,12 +141,16 @@ form.webform-client-form .webform-component-fieldset {
   float: left;
 }
 
-form.webform-client-form .webform-component-fieldset input {
+form.webform-client-form .webform-component-fieldset input.form-text {
   width: 100%;
 }
 
 form.webform-client-form #webform-component-part-2 {
   margin-right: 0;
+}
+
+form.webform-client-form .webform-component-markup {
+  clear: left;
 }
 
 form.webform-client-form #edit-actions {
