@@ -130,7 +130,7 @@ html, body {
 }
 
 /** FORMS FIELDSETS PART 1 & PART 2 **/
-form.webform-client-form .compact-form-label {
+form.webform-client-form .compact-form-label, form.webform-client-form label {
   color: #666;
   font-weight: lighter;
 }
@@ -167,8 +167,11 @@ form.webform-client-form #edit-actions {
   margin-top: 20px;
 }
 
+.not-front .region-content .region-inner {
+  border-right: 1px solid #ededed;
+  padding-right: 30px;
+}
 
 .region-sidebar-second .block-views-banners-block-1 ul li img {
   width: auto;
-  
 }
