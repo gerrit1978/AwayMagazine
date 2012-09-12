@@ -650,6 +650,20 @@ body.front h1#page-title {
   margin-bottom: 15px;
 }
 
+.view-taxonomy-term ul {
+  margin: 0;
+  list-style: none;
+}
+
+.view-taxonomy-term ul.main-list > li {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ededed;
+}
+
+.view-taxonomy-term ul.main-list > li.last {
+  border-bottom: none;
+}
 
 /** AT YOUR SERVICE PAGE **/
 /** Classified Ads **/
@@ -753,3 +767,5 @@ body.front h1#page-title {
   padding: 1em;
   background: #ededed;
 }
+
+

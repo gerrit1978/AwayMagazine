@@ -85,6 +85,14 @@ html, body {
 }
 
 
+/** ARTICLE PAGES **/
+.node-magazine-article .field-type-image {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+
 /** FOOTER 1: POSTSCRIPT **/
 .zone-postscript h2 {
   color: #d4d9dc;
