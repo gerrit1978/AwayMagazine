@@ -119,23 +119,26 @@ a.btn-large {
 }
 
 /** MAIN MENU **/
-.block-main-menu {
+.block-nice-menus-2 {
   font-family: "LeagueGothicRegular";
   text-transform: uppercase;
   font-size: 1.846em;
 }
 
-.block-main-menu ul {
+.block-nice-menus-2 ul.nice-menu {
   margin: 0;
 }
 
-.block-main-menu ul li {
+.block-nice-menus-2 ul.nice-menu li {
   list-style: none;
   float: left;
+  border: none;
+  background: none;
 }
 
-.block-main-menu a {
+.block-nice-menus-2 ul.nice-menu li a {
   color: #00bde4;
+  background: none;
 }
 
 

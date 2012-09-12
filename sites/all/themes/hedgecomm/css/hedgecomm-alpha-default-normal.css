@@ -36,17 +36,17 @@
 
 
 /** MAIN MENU **/
-.block-main-menu {
+.block-nice-menus-2 {
   height: 35px;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
-.block-main-menu ul {
+.block-nice-menus-2 ul.nice-menu {
   margin: 0;
   margin-left: 10px;
 }
 
-.block-main-menu ul li {
+.block-nice-menus-2 ul.nice-menu li {
   list-style: none; 
   float: left;
   margin: 0;
@@ -56,29 +56,24 @@
   padding: 0 10px;
 }
 
-.block-main-menu ul li a {
+.block-nice-menus-2 ul.nice-menu li a {
   padding: 3px 10px;
 }
 
-.block-main-menu ul li.last {
+.block-nice-menus-2 ul.nice-menu li.last {
   border-right: none;
 }
 
-.block-main-menu ul li.active, .block-main-menu ul li.active-trail {
-}
-
-
-.block-main-menu a.active, .block-main-menu a:hover {
+.block-nice-menus-2 ul.nice-menu li a.active, .block-nice-menus-2 ul.nice-menu li a:hover, .block-nice-menus-2 ul.nice-menu li.active-trail > a {
   color: white;
   background: #00bde4;
 }
 
-
-.block-main-menu a.last {
+.block-nice-menus-2 ul.nice-menu li a.last {
   border: none;
 }
 
-.block-main-menu a#home-link {
+.block-nice-menus-2 ul.nice-menu li a#home-link {
   display: block;
   width: 30px;
   background: url(../img/home-link.png) no-repeat center bottom;
@@ -87,9 +82,35 @@
   border: none;
 }
 
-.block-main-menu a#home-link.active, .block-main-menu a#home-link:hover {
+.block-nice-menus-2 ul.nice-menu li a#home-link.active, .block-nice-menus-2 ul.nice-menu li a#home-link:hover {
   background: #00bde4 url(../img/home-link.png) no-repeat center top;
 }
+
+
+.block-nice-menus-2 ul.nice-menu li.over, .block-nice-menus-2 ul.nice-menu li.menuparent {
+  background: none;
+}
+
+.block-nice-menus-2 ul.nice-menu li ul {
+  border: none;
+  background: #ededed;
+  left: 10px;
+}
+
+.block-nice-menus-2 ul.nice-menu li ul li {
+  border: none;
+  padding: 0;
+  font-size: 0.833em;
+}
+
+.block-nice-menus-2 ul.nice-menu li ul li a {
+  text-shadow: 0 1px 1px white;
+}
+
+.block-nice-menus-2 ul.nice-menu li ul li a:hover, .block-nice-menus-2 ul.nice-menu li ul li.active a, .block-nice-menus-2 ul.nice-menu li ul li.active-trail a, .block-nice-menus-2 ul.nice-menu li.active-trail ul li.active-trail a, .block-nice-menus-2 ul.nice-menu li ul li a.active {
+  text-shadow: 0 1px 1px #666;
+}
+
 
 /** HOMEPAGE ARTICLES 3 IN A ROW **/
 .zone-content .block-magazine-articles-block .view-magazine-articles ul li {
