@@ -859,3 +859,20 @@ body.front h1#page-title {
   border:none; 
   overflow:hidden;
 }
+
+/** GENERIC CONTENT TABLES **/
+.region-content table {
+  width: 100%;
+}
+
+.region-content table tr.even {
+  background: #fafafa;
+}
+
+.region-content table tr.odd {
+  background: #f3f3f3;
+}
+
+.region-content table tr td, .region-content table tr th {
+  padding: 10px;
+}
