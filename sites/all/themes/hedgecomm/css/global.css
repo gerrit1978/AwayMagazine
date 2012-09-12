@@ -620,7 +620,8 @@ body.front h1#page-title {
   padding-bottom: 10px;
 }
 
-.block-magazine-covers-block-1 .view-content ul li.odd {
+.block-magazine-covers-block-1 .view-content ul li.first {
+  clear: left;
 }
 
 .block-magazine-covers-block-1 .view-content ul li.last {
@@ -646,6 +647,7 @@ body.front h1#page-title {
 
 
 /** AT YOUR SERVICE PAGE **/
+/** Classified Ads **/
 .block-classified-ads-block-1 h2.block-title {
   font-size: 3.308em;
   color: #00bde4;
@@ -676,6 +678,39 @@ body.front h1#page-title {
   color: black;
   text-transform: uppercase;
 }
+
+/** Offers **/
+.block-offers-block-1 h2.block-title {
+  font-size: 3.308em;
+  color: #00bde4;
+  margin-bottom: 15px;
+}
+
+.block-offers-block-1 tr.odd td, .block-offers-block-1 tr.odd td.active, .block-offers-block-1 tr:hover.odd td {
+  background: #fbfbfb;
+}
+
+.block-offers-block-1 tr.even td, .block-offers-block-1 tr.even td.active, .block-offers-block-1 tr:hover.even td {
+  background: #ffffff;
+}
+
+.block-offers-block-1 tr td, .block-offers-block-1 td.active {
+  border: none;
+}
+
+.block-offers-block-1 tr th, .block-offers-block-1 tr th.active {
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: #fcfcfc;
+  border-bottom: 3px solid #c4c4c4;
+}
+
+.block-offers-block-1 tr th a, .block-offers-block-1 tr th {
+  color: black;
+  text-transform: uppercase;
+}
+
 
 
 /** "MAGAZINE" PAGE **/
