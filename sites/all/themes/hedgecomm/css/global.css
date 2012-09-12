@@ -782,6 +782,20 @@ body.front h1#page-title {
   text-shadow: 0 1px 1px white;
 }
 
+.node-event .field-name-field-venue-organisation {
+  margin-bottom: 20px;
+}
+
+
+/** ORGANISATION NODES **/
+.node-organisation .field-name-field-address {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.node-organisation .field-name-body {
+  margin-left: 280px;
+}
 
 /** EVENT TABLES **/
 .view-events table {
@@ -836,4 +850,12 @@ body.front h1#page-title {
   color: #00bde4;
   font-size: 2.154em;
   margin: 10px 0;
+}
+
+/** FACEBOOK BOX **/
+.fb-like-box {
+  width: 100% !important;
+  height:500px;
+  border:none; 
+  overflow:hidden;
 }
