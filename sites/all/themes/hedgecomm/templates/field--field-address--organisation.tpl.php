@@ -53,6 +53,7 @@ HTML comment.
 $latitude = $items[0]['#location']['latitude'];
 $longitude = $items[0]['#location']['longitude'];
 $title = $element['#object']->title;
+$view_mode = $element['#view_mode'];
 ?>
 
 <script type="text/javascript">

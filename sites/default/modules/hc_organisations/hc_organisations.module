@@ -1,0 +1,12 @@
+<?php
+
+
+/**
+ * Implements hook_entity_info_alter
+ */
+function hc_organisations_entity_info_alter(&$entity_info) {
+  $entity_info['node']['view modes']['organisation_mini'] = array(
+    'label' => t('Small Organisation'),
+    'custom settings' => FALSE,
+  );
+}
