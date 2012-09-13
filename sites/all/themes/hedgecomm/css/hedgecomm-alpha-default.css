@@ -202,16 +202,16 @@ form.webform-client-form #edit-actions {
 }
 
 /** LOGIN PAGE **/
-.page-user-login #user_login_form {
+.page-user #user_login_form {
   width: 50%;
   float: left;
 }
 
-.page-user-login .create-account {
+.page-user .create-account {
   margin-left: 60%;
   padding-top: 120px;
 }
 
-.page-user-login .create-account h2 {
+.page-user .create-account h2 {
   font-size: 2.769em;
 }
