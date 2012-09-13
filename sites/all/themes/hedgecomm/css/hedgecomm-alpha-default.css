@@ -195,3 +195,8 @@ form.webform-client-form #edit-actions {
   font-weight: bolder;
   font-size: 1.154em;
 }
+
+/** FACEBOOK OAUTH **/
+#block-fboauth-login {
+  float: right;
+}

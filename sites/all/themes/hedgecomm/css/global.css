@@ -349,6 +349,33 @@ body.front h1#page-title {
 }
 
 
+/** HOMEPAGE "OTHER" BANNERS **/
+.block-banners-block-3 {
+  clear: left;
+  padding: 20px 0;
+  border-bottom: 3px solid #ededed;
+}
+
+.block-banners-block-3 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.block-banners-block-3 .view-header {
+  width: 280px;
+  text-align: center;
+  padding: 10px;
+  background: #f3f4f4;
+  border: 1px solid #e4e4e4;
+  float: right;
+  margin-right: 20px;
+}
+
+.block-banners-block-3 .view-header p {
+  margin: 0;
+}
+
 /** HOMEPAGE "MAGAZINE ARTICLES" **/
 /* General */
 .zone-content .view-magazine-articles ul {
@@ -510,8 +537,7 @@ body.front h1#page-title {
   margin: 0; 
   padding: 0;
   clear: left;
-	height: 90px;
-	overflow: hidden;
+  margin-bottom: 10px;
 }
 
 #block-views-classified-ads-block ul li .views-field-field-class-ad-image {
