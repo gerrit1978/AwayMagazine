@@ -38,7 +38,7 @@
 /** MAIN MENU **/
 .block-nice-menus-2 {
   height: 35px;
-  margin-top: 10px;
+  margin-top: 16px;
 }
 
 .block-nice-menus-2 ul.nice-menu {
@@ -53,11 +53,12 @@
   padding: 0;
   border-right: 1px solid #00bde4;  
   line-height: 35px;
+  height: 35px;
   padding: 0 10px;
 }
 
 .block-nice-menus-2 ul.nice-menu li a {
-  padding: 3px 10px;
+  padding: 0 10px;
 }
 
 .block-nice-menus-2 ul.nice-menu li.last {
@@ -95,6 +96,7 @@
   border: none;
   background: #ededed;
   left: 10px;
+  margin-top: -7px;
 }
 
 .block-nice-menus-2 ul.nice-menu li ul li {
