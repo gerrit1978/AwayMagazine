@@ -104,19 +104,8 @@ a.btn-large {
 }
 
 /** SERVICE MENU **/
-.region-branding .block-menu-menu-service-menu ul {
-  margin: 0;
-  list-style: none;
-}
-
-.region-branding .block-menu-menu-service-menu ul li {
-  list-style: none;
-  float: left;
-  margin-right: 10px;
-}
-
-.region-branding .block-menu-menu-service-menu ul li a {
-  color: black;
+.block-nice-menus-1 ul li a.active {
+  font-weight: 600;
 }
 
 /** MAIN MENU **/

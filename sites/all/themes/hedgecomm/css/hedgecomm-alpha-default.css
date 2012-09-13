@@ -200,3 +200,18 @@ form.webform-client-form #edit-actions {
 #block-fboauth-login {
   float: right;
 }
+
+/** LOGIN PAGE **/
+.page-user-login #user_login_form {
+  width: 50%;
+  float: left;
+}
+
+.page-user-login .create-account {
+  margin-left: 60%;
+  padding-top: 120px;
+}
+
+.page-user-login .create-account h2 {
+  font-size: 2.769em;
+}
