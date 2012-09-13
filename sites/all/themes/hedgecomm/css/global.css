@@ -868,6 +868,15 @@ body.front h1#page-title {
   margin: 10px 0;
 }
 
+/** AGENDA PAGES **/
+.node-agenda .field-name-field-date {
+  font-family: "LeagueGothicRegular";
+  font-size: 2em;
+  color: #7b838a;
+  text-shadow: 0 1px 1px white;
+}
+
+
 /** FACEBOOK BOX **/
 .fb-like-box {
   width: 100% !important;
