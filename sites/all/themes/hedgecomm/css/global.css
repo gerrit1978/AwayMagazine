@@ -1,0 +1,945 @@
+/* This file will hold styles for the mobile version of your website (mobile first). */
+/* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+a:link, a:visited {
+  text-decoration: none;
+}
+
+/** HTML Elements **/
+h1 {
+  font-weight: 200;
+  color: #444;
+}
+
+h2 {
+  font-family: "LeagueGothicRegular";
+  font-size: 2em;
+  color: #7b838a;
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 0.1px;
+  line-height: 0.9;
+  margin-bottom: 10px;
+  text-shadow: 0 1px  1px white;
+  
+}
+
+
+#section-header {
+  border-top: 3px solid #00bde4;
+}
+
+form.webform-client-form .form-item .form-text,
+form.webform-client-form .form-item .form-textarea {
+  width: 100%;
+  background: #ededed;
+  border: 1px solid #cdcdcd;
+  padding: 6px 0;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+
+}
+
+
+/** BUTTONS and LINKS **/
+a:link, a:visited {
+  color: #00bde4;
+}
+
+a:hover {
+  color: #1d2831;
+}
+
+a.btn-large {
+  display: inline-block; 
+  padding: 8px 15px 8px; 
+  margin-bottom: 0; 
+  font-size: 1.538em; 
+  font-family: "LeagueGothicRegular";
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: white; 
+  text-align: center; 
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75); 
+  vertical-align: middle; 
+  cursor: pointer; 
+  background-color: #00c3e6; 
+  background-image: -ms-linear-gradient(top,#00c3e6,#00b4e0); 
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#00c3e6),to(#00b4e0)); 
+  background-image: -webkit-linear-gradient(top,#00c3e6,#00b4e0); 
+  background-image: -o-linear-gradient(top,#00c3e6,#00b4e0); 
+  background-image: linear-gradient(top,#00c3e6,#00b4e0);
+  background-image: -moz-linear-gradient(top,#00c3e6,#00b4e0); 
+  background-repeat: repeat-x; 
+  border: 1px solid #CCC; 
+  border-color: #00bde4; 
+  -webkit-border-radius: 4px; 
+  -moz-border-radius: 4px; 
+  border-radius: 4px; 
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#00b4e0', direction='180', strength='5');
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),0 1px 2px rgba(0, 0, 0, 0.05); 
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05); 
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-calendar td.multi-day a {
+  color: white;
+}
+
+
+
+/** LOGO **/
+.region-branding .logo-img {
+  margin-top: 30px;
+}
+
+/** BANNER LEADERBOARD BOVENAAN **/
+.region-user-second .block-banners-block {
+  width: auto;
+	overflow: hidden;
+}
+
+.region-user-second .block-banners-block img {
+  width: 100%;
+  height: auto;
+}
+
+/** SERVICE MENU **/
+.block-nice-menus-1 ul li a.active {
+  font-weight: 600;
+}
+
+/** MAIN MENU **/
+.block-nice-menus-2 {
+  font-family: "LeagueGothicRegular";
+  text-transform: uppercase;
+  font-size: 1.846em;
+}
+
+.block-nice-menus-2 ul.nice-menu {
+  margin: 0;
+}
+
+.block-nice-menus-2 ul.nice-menu li {
+  list-style: none;
+  float: left;
+  border: none;
+  background: none;
+}
+
+.block-nice-menus-2 ul.nice-menu li a {
+  color: #00bde4;
+  background: none;
+}
+
+
+/** SEARCH FORM **/
+.block-search-form form {
+  border: 3px solid #7b838a;
+  background: white;
+  height: 30px;
+  line-height: 26px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.block-search-form form .form-text {
+  width: 90%;
+  border: none;
+}
+
+.block-search-form form .form-submit {
+  position: absolute;
+  right: 0;
+  top: 6px;
+  border: none;
+  width: 21px;
+  height: 21px;
+  background: url(../img/btn-search.png) no-repeat center center;
+  text-indent: -999em;
+  cursor: pointer;
+}
+
+
+
+/** HIDE HOMEPAGE TITLE **/
+body.front h1#page-title {
+  display: none;
+}
+
+
+/** HOMEPAGE Carrousel **/
+.view-carrousel { 
+  position: relative;
+}
+
+.view-carrousel ul { 
+  margin: 0;
+  list-style: none;
+  width: auto;
+}
+
+.view-carrousel ul li {
+  width: 100%;
+  height: 100%;
+}
+
+.view-carrousel ul li a {
+  color: white;
+}
+
+.view-carrousel ul li .views-field-field-car-caption {
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  line-height: 40px;
+  background: #1d2831;
+  color: white;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.view-carrousel .view-footer {
+  position: absolute;
+  bottom: 6px;
+  right: 0;
+  color: white;
+}
+
+.view-carrousel .view-footer a {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: url(../img/carrousel-pager.png) no-repeat left top;
+  text-indent: -999em;
+  float: left;  
+  margin-right: 10px;
+}
+
+.view-carrousel .view-footer a.selected {
+  background-position: -6px 0;
+}
+
+
+/** HOMEPAGE "In The Spotlight" **/
+.block-views-in-the-spotlight-block h2 {
+  color: #00bde4;
+  font-size: 2.154em;
+  font-weight: lighter;
+  text-transform: uppercase;
+  margin: 10px 0;
+  letter-spacing: 0.1px;
+}
+
+.view-in-the-spotlight a {
+  color: black;
+}
+
+.view-in-the-spotlight ul {
+  margin: 0;
+  list-style: none;
+}
+
+.view-in-the-spotlight ul li {
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 20px;
+  height: 65px;
+  position: relative;
+}
+
+.view-in-the-spotlight ul li.last {
+  border-bottom: none;
+}
+
+.view-in-the-spotlight ul li .views-field-field-image {
+  float: left;
+  margin-right: 10px;
+}
+
+.view-in-the-spotlight ul li .views-field-created {
+  font-size: 0.846em;
+}
+
+.view-in-the-spotlight ul li .views-field-title {
+  font-family: Georgia, serif;
+  font-size: 1.154em;
+  line-height: 1;
+}
+
+.view-in-the-spotlight ul li .views-field-title a {
+  color: black;
+}
+
+.view-in-the-spotlight ul li .views-field-view-node {
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+  font-size: 0.923em;
+}
+
+/** HOMEPAGE "EVENTS & AGENDA" **/
+.block-events-block, .block-agenda-block { 
+  background: url(../img/bg-events-agenda.jpg) repeat-x;
+  width: 100%;
+  float: left;
+  margin-top: 20px;
+  padding: 10px;
+  border-bottom: 3px solid #ededed;
+}
+
+.block-events-block {
+  border-right: 3px solid #ededed;
+}
+
+.block-events-block h2, .block-agenda-block h2 {
+  color: #00bde4;
+  font-size: 2.154em;
+  margin: 10px 0;
+}
+
+.block-events-block ul, .block-agenda-block ul {
+  margin: 0; 
+  list-style: none;
+}
+
+.block-events-block .views-field-title, .block-agenda-block .views-field-title {
+  margin-bottom: 6px;
+}
+
+.block-events-block .views-field-title a, .block-agenda-block .views-field-title a {
+  font-family: Georgia;
+  color: black;
+  border-bottom: 1px solid #bdc1c4;
+  font-size: 1.692em;
+  line-height: 1;
+}
+
+.block-events-block .views-field-title a:hover, .block-agenda-block .views-field-title a:hover {
+  border-bottom: 1px solid black;
+}
+
+.block-events-block .views-field-nothing, .block-agenda-block .views-field-nothing {
+  height: 70px;
+  width: 75px;
+  color: #00bde4;
+  background: url(../img/calendar.png) no-repeat center top;
+  font-family: "LeagueGothicRegular";
+  text-transform: uppercase;
+  font-size: 2em;
+  width: 60px;
+  float: left;
+  margin-right: 10px;
+  margin-top: -5px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.block-events-block .views-field-nothing span.day, .block-agenda-block .views-field-nothing span.day {
+  font-family: Georgia;
+  font-size: 1.1em;
+  line-height: 0.9;
+  display: block;
+}
+
+.block-events-block .views-field-title, .block-events-block .views-field-body,
+.block-agenda-block .views-field-title, .block-agenda-block .views-field-body {
+  margin-left: 70px;
+}
+
+
+/** HOMEPAGE OFFERS **/
+.block-offers-block-2 {
+  clear: left;
+  padding: 20px 0;
+  border-bottom: 3px solid #ededed;
+}
+
+.block-offers-block-2 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.block-offers-block-2 ul .views-field-title {
+  font-family: "LeagueGothicRegular";
+  text-transform: uppercase;
+  font-size: 1.692em;
+  line-height: 1.1;
+}
+
+.block-offers-block-2 ul .views-field-view-node {
+  position: absolute;
+  bottom: 0;
+}
+
+.block-offers-block-2 .view-header {
+  width: 280px;
+  text-align: center;
+  padding: 10px;
+  background: #f3f4f4;
+  border: 1px solid #e4e4e4;
+  float: right;
+  margin-right: 20px;
+}
+
+.block-offers-block-2 .view-header p {
+  margin: 0;
+}
+
+/** HOMEPAGE "MAGAZINE ARTICLES" **/
+/* General */
+.zone-content .view-magazine-articles ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.zone-content .view-magazine-articles ul li .views-field-title {
+  font-family: "LeagueGothicRegular";
+  font-size: 2.308em;
+  text-transform: uppercase;
+  line-height: 0.7;
+  margin: 10px 0;
+}
+
+.zone-content .view-magazine-articles .views-field-title span {
+  font-size: 0.7em;
+}
+
+.zone-content .view-magazine-articles .views-field-title a {
+  color: #7b838a;
+}
+
+.zone-content .view-magazine-articles .views-field-title a:hover {
+  color: black;
+}
+
+
+/* 1st alone */
+.zone-content .block-magazine-articles-block-2 .view-magazine-articles ul {
+  border: none;
+	margin-bottom: 20px;
+	padding-bottom: 0;
+}
+
+.zone-content .block-magazine-articles-block-2 .view-magazine-articles ul li {
+  width: 100%;
+  border-bottom: 1px solid #ededed;
+  height: auto;
+}
+
+.zone-content .block-magazine-articles-block-2 .view-magazine-articles ul li .views-field-field-image {
+  float: left;
+  margin-right: 20px;
+}
+
+.zone-content .block-magazine-articles-block-2 .view-magazine-articles ul li .views-field-nothing {
+  float: right;
+}
+
+/* 3 in a row */
+.zone-content .block-magazine-articles-block {
+  border-bottom: 3px solid #ededed;
+  margin-bottom: 20px;
+}
+
+.zone-content .block-magazine-articles-block .view-magazine-articles ul li {
+  width: 100%;
+  float: left;
+}
+
+.zone-content .block-magazine-articles-block .view-magazine-articles ul li.last {
+  margin-right: 0;
+}
+
+/** HOMEPAGE "Magazine" BLOCK **/
+#block-views-magazine-covers-block h2 {
+	margin-bottom: 15px;
+}
+#block-views-magazine-covers-block {
+  width: 100%;
+  float: right;
+  position: relative;
+}
+
+#block-views-magazine-covers-block .views-field-field-cover-image {
+  float: left;
+  margin-right: 20px;
+}
+
+#block-views-magazine-covers-block .view-header {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#block-views-magazine-covers-block h2 {
+  font-size: 3.308em;
+  color: #00bde4;
+}
+
+#block-views-magazine-covers-block .view-footer {
+  clear: left;
+  margin-top: 20px;
+}
+
+#block-views-magazine-covers-block .view-footer .webform-component-textfield, 
+#block-views-magazine-covers-block .view-footer .webform-component-email {
+  width: 49%;
+  float: left;
+  margin-right: 2%;
+}
+
+#block-views-magazine-covers-block .view-footer .webform-component-email {
+  margin-right: 0;
+}
+
+#block-views-magazine-covers-block .view-footer .webform-component-textarea {
+  width: 100%;
+  clear: left;
+}
+
+#block-views-magazine-covers-block .view-footer .compact-form-label {
+  color: #a6a6a6;
+  font-weight: lighter;
+}
+
+#block-views-magazine-covers-block .view-footer #edit-actions {
+  float: right;
+}
+
+#block-views-magazine-covers-block .view-footer #edit-actions #edit-submit {
+  margin: 0;
+}
+
+
+/** HOMEPAGE Newsletter Block **/
+#block-block-7 {
+  width: 100%;
+  float: left;
+  border-right: 1px solid #ededed;
+}
+
+#block-block-7 h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+/** HOMEPAGE Classified Ads Block **/
+#block-views-classified-ads-block-2 {
+  width: 100%;
+  padding-top: 30px;
+  float: left;
+  border-right: 1px solid #ededed;
+}
+
+#block-views-classified-ads-block-2 h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+
+#block-views-classified-ads-block-2 ul {
+  margin: 0;
+  list-style: none;
+}
+
+#block-views-classified-ads-block-2 ul li {
+  margin: 0; 
+  padding: 0;
+  clear: left;
+  margin-bottom: 10px;
+}
+
+#block-views-classified-ads-block-2 ul li .views-field-field-class-ad-image {
+  float: left;
+  margin-right: 10px;
+}
+
+#block-views-classified-ads-block-2 ul li .views-field-title a {
+  color: black;
+  font-weight: bolder;
+}
+
+/** FOOTER 1: POSTSCRIPT **/
+.zone-postscript .block-views ul {
+  margin: 0;
+  list-style: none;
+}
+
+.zone-postscript .block-views ul li {
+  margin-bottom: 35px;
+}
+
+.zone-postscript .block-views ul li .views-field-title {
+  font-weight: bolder;
+
+}
+
+.zone-postscript .block-views ul li .views-field-title a {
+  color: black;
+}
+
+.zone-postscript .block-views ul li .views-field-title .field-content span {
+  font-weight: lighter;
+  font-size: 0.9em;
+}
+
+.zone-postscript .block-views ul li .views-field-body {
+  font-size: 0.923em;
+}
+
+.zone-postscript .block-views ul li .views-field-body p {
+  margin: 0;
+}
+
+.zone-postscript .block-views ul li .views-field-view-node {
+  display: inline;
+  font-size: 0.923em;
+}
+
+.zone-postscript .block-views ul li .views-field-view-node a {
+  border-bottom: 1px solid #d4d9dc;
+}
+
+/** FOOTER 1: Social Media Block **/
+#block-block-6 ul {
+  margin: 0;
+  list-style: none;
+}
+
+#block-block-6 ul li {
+  margin-bottom: 30px;
+}
+
+#block-block-6 ul li a {
+  background: url(../img/sprite_sm.png) no-repeat left -2px;
+  padding-left: 25px;
+}
+
+#block-block-6 ul li a.facebook {
+  background-position: left -33px;
+}
+
+#block-block-6 ul li a.twitter {
+  background-position: left -71px;
+}
+
+
+/** BANNERS **/
+.region-sidebar-second .view-banners ul {
+  margin: 0;
+  list-style: none;
+}
+
+.region-sidebar-second .view-banners ul li {
+  margin-bottom: 40px;
+}
+
+.region-sidebar-second .view-banners ul li img {
+  width: 100%;
+  height: auto;
+}
+
+
+/** LATEST 6 MAGAZINES BLOCK **/
+.block-magazine-covers-block-1 {
+}
+
+.block-magazine-covers-block-1 h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.block-magazine-covers-block-1 .view-content ul {
+  margin: 0;
+  list-style: none;
+}
+
+.block-magazine-covers-block-1 .view-content ul li {
+  width: 30%;
+  float: left;
+  margin-right: 5%;
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.block-magazine-covers-block-1 .view-content ul li.first {
+  clear: left;
+}
+
+.block-magazine-covers-block-1 .view-content ul li.last {
+  margin-right: 0;
+}
+
+.block-magazine-covers-block-1 .views-field-field-cover-image {
+	margin-bottom: 10px;
+}
+
+.block-magazine-covers-block-1 .views-field-field-cover-image img {
+  width: 100%;
+  height: auto;
+}
+
+
+/** LIFE AWAY PAGE **/
+.block-calendar-agenda-block-1 h2.block-title, .block-views-magazine-articles-block-3 h2.block-title {
+  font-size: 3.308em;
+  color: #00bde4;
+  margin-bottom: 15px;
+}
+
+.view-taxonomy-term ul {
+  margin: 0;
+  list-style: none;
+}
+
+.view-taxonomy-term ul.main-list > li {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ededed;
+}
+
+.view-taxonomy-term ul.main-list > li.last {
+  border-bottom: none;
+}
+
+/** AT YOUR SERVICE PAGE **/
+/** Classified Ads **/
+.view-classified-ads h2.block-title {
+  font-size: 3.308em;
+  color: #00bde4;
+  margin-bottom: 15px;
+}
+
+.view-classified-ads tr.odd td, .view-classified-ads tr.odd td.active, .view-classified-ads tr:hover.odd td {
+  background: #fbfbfb;
+}
+
+.view-classified-ads tr.even td, .view-classified-ads tr.even td.active, .view-classified-ads tr:hover.even td {
+  background: #ffffff;
+}
+
+.view-classified-ads tr td, .view-classified-ads td.active {
+  border: none;
+}
+
+.view-classified-ads tr th, .view-classified-ads tr th.active {
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: #fcfcfc;
+  border-bottom: 3px solid #c4c4c4;
+}
+
+.view-classified-ads tr th a, .view-classified-ads tr th {
+  color: black;
+  text-transform: uppercase;
+}
+
+/** Offers **/
+.block-offers-block-1 h2.block-title {
+  font-size: 3.308em;
+  color: #00bde4;
+  margin-bottom: 15px;
+}
+
+.view-offers tr.odd td, .view-offers tr.odd td.active, .view-offers tr:hover.odd td {
+  background: #fbfbfb;
+}
+
+.view-offers tr.even td, .view-offers tr.even td.active, .view-offers tr:hover.even td {
+  background: #ffffff;
+}
+
+.view-offers tr td, .view-offers td.active {
+  border: none;
+}
+
+.view-offers tr th, .view-offers tr th.active {
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: #fcfcfc;
+  border-bottom: 3px solid #c4c4c4;
+}
+
+.view-offers tr th a, .view-offers tr th {
+  color: black;
+  text-transform: uppercase;
+}
+
+
+
+/** "MAGAZINE" PAGE **/
+.block-magazine-covers-block-1 {
+  margin-top: 20px;
+}
+
+.block-magazine-covers-block-1 h2.block-title {
+  font-size: 3.308em;
+  color: #00bde4;
+  margin-bottom: 15px;
+}
+
+/** LINK TO ADVERTISERS BLOCK AND LINK TO MAGAZINE PAGE BLOCK **/
+#block-block-8, #block-block-9 { 
+  margin: 20px 0;
+  background: #ededed;
+  border: 4px solid #7B838A;
+  padding: 1em;
+  text-align: center;
+}
+
+#block-block-8 p, #block-block-9 p {
+  margin: 0;
+}
+
+#block-block-8 h2, #block-block-9 h2 {
+  font-size: 2em;
+}
+
+/** WEBFORM SUBSCRIBE **/
+#edit-submitted-special-offer {
+  font-size: 1.154em;
+  border: 3px solid #7b838a;
+  padding: 1em;
+  background: #ededed;
+}
+
+
+/** COMMUNITY PAGES **/
+
+/** EVENT NODES **/
+.node-event .field-name-field-date {
+  font-family: "LeagueGothicRegular";
+  font-size: 2em;
+  color: #7b838a;
+  text-shadow: 0 1px 1px white;
+}
+
+.node-event .field-name-field-venue-organisation {
+  margin-bottom: 20px;
+}
+
+
+/** ORGANISATION NODES **/
+.node-organisation .field-name-field-address {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.node-organisation .field-name-body {
+  margin-left: 280px;
+}
+
+/** EVENT TABLES **/
+.view-events table {
+  width: 100%;
+}
+
+.view-events table td, .view-events table th {
+  padding: 10px;
+}
+
+.view-events table th {
+	font-family: "LeagueGothicRegular";
+	font-size: 1.538em;
+	text-transform: uppercase;
+  color: #7b838a;
+}
+
+.view-events table tr.even {
+  background: #fafafa;
+}
+
+.view-events table tr.odd {
+  background: #f3f3f3;
+}
+
+/** ORGANISATIONS TABLES **/
+.view-organisations table {
+  width: 100%;
+}
+
+.view-organisations table td, .view-organisations table th {
+  padding: 10px;
+}
+
+.view-organisations table th {
+	font-family: "LeagueGothicRegular";
+	font-size: 1.538em;
+	text-transform: uppercase;
+  color: #7b838a;
+}
+
+.view-organisations table tr.even {
+  background: #fafafa;
+}
+
+.view-organisations table tr.odd {
+  background: #f3f3f3;
+}
+
+/** EVENTS PER ORGANISATION TABLE **/
+.block-hc-events-events-per-organisation h2 {
+  color: #00bde4;
+  font-size: 2.154em;
+  margin: 10px 0;
+}
+
+
+/** OFFERS PER COMPANY TABLE **/
+.block-hc-offers-offers-per-company h2 {
+  color: #00bde4;
+  font-size: 2.154em;
+  margin: 10px 0;
+}
+
+/** AGENDA PAGES **/
+.node-agenda .field-name-field-date {
+  font-family: "LeagueGothicRegular";
+  font-size: 2em;
+  color: #7b838a;
+  text-shadow: 0 1px 1px white;
+}
+
+
+/** CLASSIFIED ADS NODES **/
+.node-type-classified-ads .field-type-image {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.node-type-classified-ads .field-name-field-class-ad-price, .node-type-classified-ads .field-name-field-class-ad-contact {
+  clear: left;
+} 
+
+/** FACEBOOK BOX **/
+.fb-like-box {
+  width: 100% !important;
+  height:500px;
+  border:none; 
+  overflow:hidden;
+}
+
+/** GENERIC CONTENT TABLES **/
+.region-content table {
+  width: 100%;
+}
+
+.region-content table tr.even {
+  background: #fafafa;
+}
+
+.region-content table tr.odd {
+  background: #f3f3f3;
+}
+
+.region-content table tr td, .region-content table tr th {
+  padding: 10px;
+}
