@@ -907,6 +907,17 @@ body.front h1#page-title {
 }
 
 
+/** CLASSIFIED ADS NODES **/
+.node-type-classified-ads .field-type-image {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.node-type-classified-ads .field-name-field-class-ad-price, .node-type-classified-ads .field-name-field-class-ad-contact {
+  clear: left;
+} 
+
 /** FACEBOOK BOX **/
 .fb-like-box {
   width: 100% !important;
