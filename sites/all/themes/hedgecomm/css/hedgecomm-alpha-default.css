@@ -57,11 +57,26 @@ html, body {
 }
 
 
-/** EVENTS & AGENDA BLOCK **/
+/** HOMEPAGE EVENTS & AGENDA BLOCK **/
 .block-events-block ul li, .block-agenda-block ul li {
   margin-bottom: 35px;
 }
 
+
+/** HOMEPAGE "OFFERBLOCK" :) **/
+.block-offers-block-2 .view-content {
+  margin-right: 330px;
+}
+
+.block-offers-block-2 ul li {
+  width: 47%;
+  margin-right: 4%;
+  float: left;
+}
+
+.block-offers-block-2 ul li.last {
+  margin-right: 0;
+}
 
 /** HOMEPAGE "MAGAZINE ARTICLES" 1st alone **/
 .zone-content .block-magazine-articles-block-2 {

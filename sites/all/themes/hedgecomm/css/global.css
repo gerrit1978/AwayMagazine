@@ -347,20 +347,35 @@ body.front h1#page-title {
 }
 
 
-/** HOMEPAGE "OTHER" BANNERS **/
-.block-banners-block-3 {
+/** HOMEPAGE OFFERS **/
+.block-offers-block-2 {
   clear: left;
   padding: 20px 0;
   border-bottom: 3px solid #ededed;
 }
 
-.block-banners-block-3 ul {
+.block-offers-block-2 ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  position: relative;
 }
 
-.block-banners-block-3 .view-header {
+.block-offers-block-2 ul .views-field-title {
+  font-family: "LeagueGothicRegular";
+  text-transform: uppercase;
+  font-size: 1.692em;
+  line-height: 1.1;
+}
+
+.block-offers-block-2 ul .views-field-view-node {
+  position: absolute;
+  bottom: 0;
+}
+
+.block-offers-block-2 .view-header {
   width: 280px;
   text-align: center;
   padding: 10px;
@@ -370,7 +385,7 @@ body.front h1#page-title {
   margin-right: 20px;
 }
 
-.block-banners-block-3 .view-header p {
+.block-offers-block-2 .view-header p {
   margin: 0;
 }
 
