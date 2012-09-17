@@ -38,7 +38,11 @@
 /** MAIN MENU **/
 .block-nice-menus-2 {
   height: 35px;
+<<<<<<< HEAD
   margin-top: 10px;
+=======
+  margin-top: 16px;
+>>>>>>> 2dd87f0e3c8e9b0a67163fbbb59c11e941af7326
 }
 
 .block-nice-menus-2 ul.nice-menu {
@@ -53,11 +57,16 @@
   padding: 0;
   border-right: 1px solid #00bde4;  
   line-height: 35px;
+  height: 35px;
   padding: 0 10px;
 }
 
 .block-nice-menus-2 ul.nice-menu li a {
+<<<<<<< HEAD
   padding: 3px 10px;
+=======
+  padding: 0 10px;
+>>>>>>> 2dd87f0e3c8e9b0a67163fbbb59c11e941af7326
 }
 
 .block-nice-menus-2 ul.nice-menu li.last {
@@ -95,6 +104,10 @@
   border: none;
   background: #ededed;
   left: 10px;
+<<<<<<< HEAD
+=======
+  margin-top: -7px;
+>>>>>>> 2dd87f0e3c8e9b0a67163fbbb59c11e941af7326
 }
 
 .block-nice-menus-2 ul.nice-menu li ul li {
