@@ -57,6 +57,12 @@ html, body {
 }
 
 
+/** EVENTS & AGENDA BLOCK **/
+.block-events-block ul li, .block-agenda-block ul li {
+  margin-bottom: 35px;
+}
+
+
 /** HOMEPAGE "MAGAZINE ARTICLES" 1st alone **/
 .zone-content .block-magazine-articles-block-2 {
   clear: both;
