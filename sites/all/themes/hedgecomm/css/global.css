@@ -184,6 +184,10 @@ body.front h1#page-title {
   height: 100%;
 }
 
+.view-carrousel ul li a {
+  color: white;
+}
+
 .view-carrousel ul li .views-field-field-car-caption {
   position: absolute;
   bottom: 0;
