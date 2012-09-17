@@ -528,37 +528,37 @@ body.front h1#page-title {
 }
 
 /** HOMEPAGE Classified Ads Block **/
-#block-views-classified-ads-block {
+#block-views-classified-ads-block-2 {
   width: 100%;
   padding-top: 30px;
   float: left;
   border-right: 1px solid #ededed;
 }
 
-#block-views-classified-ads-block h2 {
+#block-views-classified-ads-block-2 h2 {
   font-size: 2em;
   margin-bottom: 10px;
 }
 
 
-#block-views-classified-ads-block ul {
+#block-views-classified-ads-block-2 ul {
   margin: 0;
   list-style: none;
 }
 
-#block-views-classified-ads-block ul li {
+#block-views-classified-ads-block-2 ul li {
   margin: 0; 
   padding: 0;
   clear: left;
   margin-bottom: 10px;
 }
 
-#block-views-classified-ads-block ul li .views-field-field-class-ad-image {
+#block-views-classified-ads-block-2 ul li .views-field-field-class-ad-image {
   float: left;
   margin-right: 10px;
 }
 
-#block-views-classified-ads-block ul li .views-field-title a {
+#block-views-classified-ads-block-2 ul li .views-field-title a {
   color: black;
   font-weight: bolder;
 }
@@ -709,25 +709,25 @@ body.front h1#page-title {
 
 /** AT YOUR SERVICE PAGE **/
 /** Classified Ads **/
-.block-classified-ads-block-1 h2.block-title {
+.view-classified-ads h2.block-title {
   font-size: 3.308em;
   color: #00bde4;
   margin-bottom: 15px;
 }
 
-.block-classified-ads-block-1 tr.odd td, .block-classified-ads-block-1 tr.odd td.active, .block-classified-ads-block-1 tr:hover.odd td {
+.view-classified-ads tr.odd td, .view-classified-ads tr.odd td.active, .view-classified-ads tr:hover.odd td {
   background: #fbfbfb;
 }
 
-.block-classified-ads-block-1 tr.even td, .block-classified-ads-block-1 tr.even td.active, .block-classified-ads-block-1 tr:hover.even td {
+.view-classified-ads tr.even td, .view-classified-ads tr.even td.active, .view-classified-ads tr:hover.even td {
   background: #ffffff;
 }
 
-.block-classified-ads-block-1 tr td, .block-classified-ads-block-1 td.active {
+.view-classified-ads tr td, .view-classified-ads td.active {
   border: none;
 }
 
-.block-classified-ads-block-1 tr th, .block-classified-ads-block-1 tr th.active {
+.view-classified-ads tr th, .view-classified-ads tr th.active {
   border: none;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -735,7 +735,7 @@ body.front h1#page-title {
   border-bottom: 3px solid #c4c4c4;
 }
 
-.block-classified-ads-block-1 tr th a, .block-classified-ads-block-1 tr th {
+.view-classified-ads tr th a, .view-classified-ads tr th {
   color: black;
   text-transform: uppercase;
 }
@@ -747,19 +747,19 @@ body.front h1#page-title {
   margin-bottom: 15px;
 }
 
-.block-offers-block-1 tr.odd td, .block-offers-block-1 tr.odd td.active, .block-offers-block-1 tr:hover.odd td {
+.view-offers tr.odd td, .view-offers tr.odd td.active, .view-offers tr:hover.odd td {
   background: #fbfbfb;
 }
 
-.block-offers-block-1 tr.even td, .block-offers-block-1 tr.even td.active, .block-offers-block-1 tr:hover.even td {
+.view-offers tr.even td, .view-offers tr.even td.active, .view-offers tr:hover.even td {
   background: #ffffff;
 }
 
-.block-offers-block-1 tr td, .block-offers-block-1 td.active {
+.view-offers tr td, .view-offers td.active {
   border: none;
 }
 
-.block-offers-block-1 tr th, .block-offers-block-1 tr th.active {
+.view-offers tr th, .view-offers tr th.active {
   border: none;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -767,7 +767,7 @@ body.front h1#page-title {
   border-bottom: 3px solid #c4c4c4;
 }
 
-.block-offers-block-1 tr th a, .block-offers-block-1 tr th {
+.view-offers tr th a, .view-offers tr th {
   color: black;
   text-transform: uppercase;
 }
@@ -886,6 +886,13 @@ body.front h1#page-title {
 
 /** EVENTS PER ORGANISATION TABLE **/
 .block-hc-events-events-per-organisation h2 {
+  color: #00bde4;
+  font-size: 2.154em;
+  margin: 10px 0;
+}
+
+/** OFFERS PER COMPANY TABLE **/
+.block-hc-offers-offers-per-company h2 {
   color: #00bde4;
   font-size: 2.154em;
   margin: 10px 0;

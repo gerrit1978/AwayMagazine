@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * Implements hook_block_info
+ */
+function hc_offers_block_info() {
+  $blocks = array();
+  
+  $blocks['offers_per_company'] = array(
+    'info' => t('Offers per Company: Company Page'),
+  );
+  
+  return $blocks;
+}
+
+
+/**
+ * Implements hook_block_view
+ */
+function hc_offers_block_view($delta = "") {
+  $block = array();
+  switch ($delta) {
+    case 'offers_per_company':
+      $block['subject'] = 'Offers';
+      $block['content'] = _hc_offers_render_offers_per_company();
+      break;
+  }
+  
+  return $block;
+}
+
+
+
+/**
+ * Renders offers for a given company
+ */
+function _hc_offers_render_offers_per_company() {
+
+  if (arg(0) == 'node' && is_numeric(arg(1))) {
+    $nid = arg(1);
+  }
+  
+  $result = db_query("SELECT entity_id FROM {field_revision_field_offer_company} WHERE field_offer_company_nid=:company_nid;", array(':company_nid' => $nid));
+  $nids_offers = array();
+  foreach ($result as $row) {
+    $nids_offers[] = $row->entity_id;
+  }
+
+	$nids_offers_for_view = implode(',', $nids_offers);
+
+  $output = array();
+  
+  $output = views_embed_view('offers', 'block_1', $nids_offers_for_view);
+  
+  return $output;
+  
+  /* views_embed_view('events', 'block_2', ….) */
+}
