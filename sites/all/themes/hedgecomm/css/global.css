@@ -5,6 +5,11 @@ a:link, a:visited {
 }
 
 /** HTML Elements **/
+h1 {
+  font-weight: 200;
+  color: #444;
+}
+
 h2 {
   font-family: "LeagueGothicRegular";
   font-size: 2em;
@@ -33,8 +38,6 @@ form.webform-client-form .form-item .form-textarea {
   -moz-border-radius: 3px;
 
 }
-
-
 
 
 /** BUTTONS and LINKS **/
@@ -78,6 +81,9 @@ a.btn-large {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
+.calendar-calendar td.multi-day a {
+  color: white;
+}
 
 
 
@@ -98,39 +104,31 @@ a.btn-large {
 }
 
 /** SERVICE MENU **/
-.region-branding .block-menu-menu-service-menu ul {
-  margin: 0;
-  list-style: none;
-}
-
-.region-branding .block-menu-menu-service-menu ul li {
-  list-style: none;
-  float: left;
-  margin-right: 10px;
-}
-
-.region-branding .block-menu-menu-service-menu ul li a {
-  color: black;
+.block-nice-menus-1 ul li a.active {
+  font-weight: 600;
 }
 
 /** MAIN MENU **/
-.block-main-menu {
+.block-nice-menus-2 {
   font-family: "LeagueGothicRegular";
   text-transform: uppercase;
   font-size: 1.846em;
 }
 
-.block-main-menu ul {
+.block-nice-menus-2 ul.nice-menu {
   margin: 0;
 }
 
-.block-main-menu ul li {
+.block-nice-menus-2 ul.nice-menu li {
   list-style: none;
   float: left;
+  border: none;
+  background: none;
 }
 
-.block-main-menu a {
+.block-nice-menus-2 ul.nice-menu li a {
   color: #00bde4;
+  background: none;
 }
 
 
@@ -341,6 +339,33 @@ body.front h1#page-title {
 }
 
 
+/** HOMEPAGE "OTHER" BANNERS **/
+.block-banners-block-3 {
+  clear: left;
+  padding: 20px 0;
+  border-bottom: 3px solid #ededed;
+}
+
+.block-banners-block-3 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.block-banners-block-3 .view-header {
+  width: 280px;
+  text-align: center;
+  padding: 10px;
+  background: #f3f4f4;
+  border: 1px solid #e4e4e4;
+  float: right;
+  margin-right: 20px;
+}
+
+.block-banners-block-3 .view-header p {
+  margin: 0;
+}
+
 /** HOMEPAGE "MAGAZINE ARTICLES" **/
 /* General */
 .zone-content .view-magazine-articles ul {
@@ -502,8 +527,7 @@ body.front h1#page-title {
   margin: 0; 
   padding: 0;
   clear: left;
-	height: 90px;
-	overflow: hidden;
+  margin-bottom: 10px;
 }
 
 #block-views-classified-ads-block ul li .views-field-field-class-ad-image {
@@ -612,7 +636,7 @@ body.front h1#page-title {
 }
 
 .block-magazine-covers-block-1 .view-content ul li {
-  width: 40%;
+  width: 30%;
   float: left;
   margin-right: 5%;
   border-bottom: 1px solid #ededed;
@@ -620,15 +644,22 @@ body.front h1#page-title {
   padding-bottom: 10px;
 }
 
+.block-magazine-covers-block-1 .view-content ul li.first {
+  clear: left;
+}
+
 .block-magazine-covers-block-1 .view-content ul li.last {
   margin-right: 0;
 }
 
 .block-magazine-covers-block-1 .views-field-field-cover-image {
-  float: left;
-  margin-right: 20px;
+	margin-bottom: 10px;
 }
 
+.block-magazine-covers-block-1 .views-field-field-cover-image img {
+  width: 100%;
+  height: auto;
+}
 
 
 /** LIFE AWAY PAGE **/
@@ -638,8 +669,23 @@ body.front h1#page-title {
   margin-bottom: 15px;
 }
 
+.view-taxonomy-term ul {
+  margin: 0;
+  list-style: none;
+}
+
+.view-taxonomy-term ul.main-list > li {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ededed;
+}
+
+.view-taxonomy-term ul.main-list > li.last {
+  border-bottom: none;
+}
 
 /** AT YOUR SERVICE PAGE **/
+/** Classified Ads **/
 .block-classified-ads-block-1 h2.block-title {
   font-size: 3.308em;
   color: #00bde4;
@@ -671,6 +717,39 @@ body.front h1#page-title {
   text-transform: uppercase;
 }
 
+/** Offers **/
+.block-offers-block-1 h2.block-title {
+  font-size: 3.308em;
+  color: #00bde4;
+  margin-bottom: 15px;
+}
+
+.block-offers-block-1 tr.odd td, .block-offers-block-1 tr.odd td.active, .block-offers-block-1 tr:hover.odd td {
+  background: #fbfbfb;
+}
+
+.block-offers-block-1 tr.even td, .block-offers-block-1 tr.even td.active, .block-offers-block-1 tr:hover.even td {
+  background: #ffffff;
+}
+
+.block-offers-block-1 tr td, .block-offers-block-1 td.active {
+  border: none;
+}
+
+.block-offers-block-1 tr th, .block-offers-block-1 tr th.active {
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: #fcfcfc;
+  border-bottom: 3px solid #c4c4c4;
+}
+
+.block-offers-block-1 tr th a, .block-offers-block-1 tr th {
+  color: black;
+  text-transform: uppercase;
+}
+
+
 
 /** "MAGAZINE" PAGE **/
 .block-magazine-covers-block-1 {
@@ -683,8 +762,8 @@ body.front h1#page-title {
   margin-bottom: 15px;
 }
 
-/** LINK TO ADVERTISERS BLOCK **/
-#block-block-8 { 
+/** LINK TO ADVERTISERS BLOCK AND LINK TO MAGAZINE PAGE BLOCK **/
+#block-block-8, #block-block-9 { 
   margin: 20px 0;
   background: #ededed;
   border: 4px solid #7B838A;
@@ -692,15 +771,124 @@ body.front h1#page-title {
   text-align: center;
 }
 
-#block-block-8 p {
+#block-block-8 p, #block-block-9 p {
   margin: 0;
 }
 
-#block-block-8 h2 {
+#block-block-8 h2, #block-block-9 h2 {
   font-size: 2em;
 }
 
 /** WEBFORM SUBSCRIBE **/
 #edit-submitted-special-offer {
   font-size: 1.154em;
+  border: 3px solid #7b838a;
+  padding: 1em;
+  background: #ededed;
+}
+
+
+/** COMMUNITY PAGES **/
+
+/** EVENT NODES **/
+.node-event .field-name-field-date {
+  font-family: "LeagueGothicRegular";
+  font-size: 2em;
+  color: #7b838a;
+  text-shadow: 0 1px 1px white;
+}
+
+.node-event .field-name-field-venue-organisation {
+  margin-bottom: 20px;
+}
+
+
+/** ORGANISATION NODES **/
+.node-organisation .field-name-field-address {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.node-organisation .field-name-body {
+  margin-left: 280px;
+}
+
+/** EVENT TABLES **/
+.view-events table {
+  width: 100%;
+}
+
+.view-events table td, .view-events table th {
+  padding: 10px;
+}
+
+.view-events table th {
+	font-family: "LeagueGothicRegular";
+	font-size: 1.538em;
+	text-transform: uppercase;
+  color: #7b838a;
+}
+
+.view-events table tr.even {
+  background: #fafafa;
+}
+
+.view-events table tr.odd {
+  background: #f3f3f3;
+}
+
+/** ORGANISATIONS TABLES **/
+.view-organisations table {
+  width: 100%;
+}
+
+.view-organisations table td, .view-organisations table th {
+  padding: 10px;
+}
+
+.view-organisations table th {
+	font-family: "LeagueGothicRegular";
+	font-size: 1.538em;
+	text-transform: uppercase;
+  color: #7b838a;
+}
+
+.view-organisations table tr.even {
+  background: #fafafa;
+}
+
+.view-organisations table tr.odd {
+  background: #f3f3f3;
+}
+
+/** EVENTS PER ORGANISATION TABLE **/
+.block-hc-events-events-per-organisation h2 {
+  color: #00bde4;
+  font-size: 2.154em;
+  margin: 10px 0;
+}
+
+/** FACEBOOK BOX **/
+.fb-like-box {
+  width: 100% !important;
+  height:500px;
+  border:none; 
+  overflow:hidden;
+}
+
+/** GENERIC CONTENT TABLES **/
+.region-content table {
+  width: 100%;
+}
+
+.region-content table tr.even {
+  background: #fafafa;
+}
+
+.region-content table tr.odd {
+  background: #f3f3f3;
+}
+
+.region-content table tr td, .region-content table tr th {
+  padding: 10px;
 }

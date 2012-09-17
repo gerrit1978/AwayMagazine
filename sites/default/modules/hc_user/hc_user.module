@@ -5,56 +5,10 @@
  * Implements hook_menu_alter().
  */
 function hc_user_menu_alter(&$items) {
-  $items['user/%user']['title callback'] = '_hc_user_page_title';
-  $items['user/%user/connections']['access_callback'] = '_hc_user_access_callback';
-  $items['user/%user/view']['title'] = 'User account';
-  $items['user/%user/view']['title callback'] = '_hc_user_tab_title';
-  $items['user/%user/view']['title arguments'] = array(1);
-  $items['user/%user/edit']['title'] = 'Update email/password';
+
   $items['user']['type'] = MENU_CALLBACK;
   $items['user/register']['type'] = MENU_CALLBACK;
   $items['user/password']['type'] = MENU_CALLBACK;
-}
-
-/**
- * Helper function for user page title.
- */
-function _hc_user_page_title($account = NULL) {
-  if (!is_object($account)) {
-    $account = $GLOBALS['user'];
-  }
-
-  $title = t('Hello');
-  if (module_exists('commerce_addressbook')) {
-    $billing_profile_id = commerce_addressbook_get_default_profile_id($account->uid, 'billing');
-    if ($billing_profile_id) {
-      $billing_profile = commerce_customer_profile_load($billing_profile_id);
-      $title .= ', ' . check_plain($billing_profile->commerce_customer_address[LANGUAGE_NONE][0]['name_line']);
-    }
-  }
-  return $title;
-}
-
-/**
- * Helper function for user menu tab title.
- */
-function _hc_user_tab_title($account) {
-  return (is_object($account) && $GLOBALS['user']->uid == $account->uid) ? t('My account') : t('Account overview');
-}
-
-/**
- * Grant access only to administrators.
- */
-function _hc_user_access_callback($account) {
-  return user_access('administer site configuration', $account);
-}
-
-
-/**
- * Implements hook_menu_default_menu_links()
- */
-function hc_user_menu_default_menu_links() {
-  exit('functie aangeroepen');
 }
 
 /**
@@ -103,44 +57,6 @@ function hc_user_user_view_alter(&$build) {
     unset($build['summary']);
   }
 }
-
-/**
- * Implements hook_preprocess_user_profile_item().
- */
-function hc_user_preprocess_user_profile_item(&$variables) {
-  // Append custom css classes.
-  if (!empty($variables['element']['#attributes']['class'])) {
-    $variables['classes_array'] = array_merge($variables['classes_array'], $variables['element']['#attributes']['class']);
-  }
-}
-
-/**
- * Implements hook_preprocess_user_profile_category().
- */
-function hc_user_preprocess_user_profile_category(&$variables) {
-  // Append custom css classes.
-  if (!empty($variables['element']['#attributes']['class'])) {
-    $variables['classes_array'] = array_merge($variables['classes_array'], $variables['element']['#attributes']['class']);
-  }
-
-	if (is_array($variables['classes_array'])) {
-	  $variables['classes'] = implode(' ', $variables['classes_array']);
-	}
-  
-}
-
-/**
- * Implements hook_theme_registry_alter().
- */
-function hc_user_theme_registry_alter(&$theme_registry) {
-  $theme_registry['user_profile_category']['template'] = 'user-profile-category';
-  $theme_registry['user_profile_item']['template'] = 'user-profile-item';
-
-  $theme_registry['user_profile_category']['path'] = drupal_get_path('module', 'hc_user');
-  $theme_registry['user_profile_item']['path'] = drupal_get_path('module', 'hc_user');
-
-}
-
 
 /**
  * Implements hook_preprocess_page().

@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * Implements hook_block_info
+ */
+function hc_events_block_info() {
+  $blocks = array();
+  
+  $blocks['events_per_organisation'] = array(
+    'info' => t('Events per Organisation: Organisation Page'),
+  );
+  
+  return $blocks;
+}
+
+
+/**
+ * Implements hook_block_view
+ */
+function hc_events_block_view($delta = "") {
+  $block = array();
+  switch ($delta) {
+    case 'events_per_organisation':
+      $block['subject'] = 'Events';
+      $block['content'] = _hc_events_render_events_per_organisation();
+      break;
+  }
+  
+  return $block;
+}
+
+
+
+/**
+ * Renders events for a given organisation
+ */
+function _hc_events_render_events_per_organisation() {
+
+  if (arg(0) == 'node' && is_numeric(arg(1))) {
+    $nid = arg(1);
+  }
+  
+  $result = db_query("SELECT entity_id FROM {field_revision_field_venue_organisation} WHERE field_venue_organisation_nid=:organisation_nid;", array(':organisation_nid' => $nid));
+  $nids_events = array();
+  foreach ($result as $row) {
+    $nids_events[] = $row->entity_id;
+  }
+
+	$nids_events_for_view = implode(',', $nids_events);
+
+  $output = array();
+  
+  $output = views_embed_view('events', 'block_2', $nids_events_for_view);
+  
+  return $output;
+  
+  /* views_embed_view('events', 'block_2', ….) */
+}

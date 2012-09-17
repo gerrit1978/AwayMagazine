@@ -85,6 +85,14 @@ html, body {
 }
 
 
+/** ARTICLE PAGES **/
+.node-magazine-article .field-type-image {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+
 /** FOOTER 1: POSTSCRIPT **/
 .zone-postscript h2 {
   color: #d4d9dc;
@@ -130,7 +138,7 @@ html, body {
 }
 
 /** FORMS FIELDSETS PART 1 & PART 2 **/
-form.webform-client-form .compact-form-label {
+form.webform-client-form .compact-form-label, form.webform-client-form label {
   color: #666;
   font-weight: lighter;
 }
@@ -167,8 +175,43 @@ form.webform-client-form #edit-actions {
   margin-top: 20px;
 }
 
+.not-front .region-content .region-inner {
+  border-right: 1px solid #ededed;
+  padding-right: 30px;
+}
 
 .region-sidebar-second .block-views-banners-block-1 ul li img {
   width: auto;
-  
+}
+
+/** EVENTS LOCATION **/
+.node-type-event #map_canvas {
+  float: left;
+  margin-right: 20px;
+}
+
+.node-type-event .location.vcard {
+  float: left;
+  font-weight: bolder;
+  font-size: 1.154em;
+}
+
+/** FACEBOOK OAUTH **/
+#block-fboauth-login {
+  float: right;
+}
+
+/** LOGIN PAGE **/
+.page-user #user_login_form {
+  width: 50%;
+  float: left;
+}
+
+.page-user .create-account {
+  margin-left: 60%;
+  padding-top: 120px;
+}
+
+.page-user .create-account h2 {
+  font-size: 2.769em;
 }

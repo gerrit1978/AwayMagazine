@@ -32,5 +32,4 @@ function hedgecomm_alpha_preprocess_views_view_fields(&$vars) {
 	}	
 	
 	
-	
 }
