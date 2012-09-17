@@ -113,6 +113,29 @@
   text-shadow: 0 1px 1px #666;
 }
 
+/** HOMEPAGE OFFERS **/
+.block-offers-block-2 .view-header {
+  width: 30%;
+  text-align: center;
+  padding: 10px;
+  background: #f3f4f4;
+  border: 1px solid #e4e4e4;
+  float: right;
+  margin-right: 20px;
+}
+.block-offers-block-2 ul {
+  margin-right: 35%;
+}
+
+.block-offers-block-2 ul li {
+  width: 47%;
+  margin-right: 4%;
+  float: left;
+}
+
+.block-offers-block-2 ul li.last {
+  margin-right: 0;
+}
 
 /** HOMEPAGE ARTICLES 3 IN A ROW **/
 .zone-content .block-magazine-articles-block .view-magazine-articles ul li {

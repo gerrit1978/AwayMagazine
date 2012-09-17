@@ -375,16 +375,6 @@ body.front h1#page-title {
   bottom: 0;
 }
 
-.block-offers-block-2 .view-header {
-  width: 280px;
-  text-align: center;
-  padding: 10px;
-  background: #f3f4f4;
-  border: 1px solid #e4e4e4;
-  float: right;
-  margin-right: 20px;
-}
-
 .block-offers-block-2 .view-header p {
   margin: 0;
 }
