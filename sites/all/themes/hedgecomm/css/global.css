@@ -380,7 +380,7 @@ body.front h1#page-title {
 }
 
 /** HOMEPAGE "MAGAZINE ARTICLES" **/
-/* General */
+/* General and Social Media */
 .zone-content .view-magazine-articles ul {
   list-style: none;
   padding-left: 20px;
@@ -406,6 +406,10 @@ body.front h1#page-title {
   color: black;
 }
 
+.zone-content .view-magazine-articles ul li .facebook, .zone-content .view-magazine-articles ul li .twitter, .zone-content .view-magazine-articles ul li .google {
+  float: left;
+  height: 26px;
+}
 
 /* 1st alone */
 .zone-content .block-magazine-articles-block-2 .view-magazine-articles ul {
