@@ -1,0 +1,5 @@
+name          = Social Media
+description   = Provides "Share This" block for Facebook, Twitter and Google +
+core          = 7.x
+version       = 7.x-1.0
+package       = HedgeComm

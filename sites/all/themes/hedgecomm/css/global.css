@@ -933,3 +933,12 @@ body.front h1#page-title {
 .region-content table tr td, .region-content table tr th {
   padding: 10px;
 }
+
+
+/** SOCIAL MEDIA BUTTONS ON EVERY PAGE **/
+#block-hc-sm-hc-sm {
+}
+
+#block-hc-sm-hc-sm .facebook, #block-hc-sm-hc-sm .google, #block-hc-sm-hc-sm .twitter {
+  float: left;
+}

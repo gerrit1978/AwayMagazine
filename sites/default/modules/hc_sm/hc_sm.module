@@ -1,0 +1,64 @@
+<?php
+
+
+/**
+ * Implements hook_block_info
+ */
+function hc_sm_block_info() {
+  $blocks = array();
+  
+  $blocks['hc_sm'] = array(
+    'info' => t('Social Media: Share this via Facebook, Twitter, Google+'),
+  );
+  
+  return $blocks;
+}
+
+
+/**
+ * Implements hook_block_view
+ */
+function hc_sm_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+    case 'hc_sm':
+      $block['content'] = array(
+        '#markup' => _hc_sm_render_hc_sm(),
+      ); 
+      break;
+  }
+  
+  return $block;
+  
+}
+
+
+/**
+ * Implements hook_theme
+ */
+function hc_sm_theme() {
+  return array(
+    'hc_sm_main' => array(
+      'template' => 'hc_sm_main',
+      'variables' => array('path' => NULL),
+    ),
+  );
+}
+
+
+/**
+ * Helper function for rendering main Social Media Block
+ */
+function _hc_sm_render_hc_sm() {
+
+  if (arg(0) == 'node' && is_numeric(arg(1))) {
+    $nid = arg(1);
+    $path = url('node/' . $nid, array('absolute' => TRUE));
+  } else {
+    $path = url($_GET['q'], array('absolute' => TRUE));
+  }
+
+  $output = theme('hc_sm_main', array('path' => $path));
+  
+  return $output;
+}
