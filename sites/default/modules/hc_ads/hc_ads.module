@@ -70,6 +70,36 @@ function hc_ads_node_insert($node) {
 }
 
 
+/**
+ * Implements template_preprocess_field
+ */
+function hc_ads_preprocess_views_view_fields(&$vars) {
+
+  $view_name = $vars['view']->name;
+
+	if ($view_name == 'banners') {
+	
+		foreach ($vars['fields'] as $delta => $field) {
+			if ($delta = 'field_banner') {
+			  $row = $vars['row'];
+			  $nid = $row->nid;
+			  $result = db_query("SELECT views FROM {hc_banner_stats} WHERE nid=:nid;", array(':nid' => $nid));
+			  foreach ($result as $row) {
+			    $current_views = $row->views;
+			  }
+			  $new_views = $current_views + 1;
+			  $num_updated = db_update('hc_banner_stats')
+			    ->fields(array(
+			      'views' => $new_views
+			    ))
+			    ->condition('nid', $nid, '=')
+			    ->execute();
+			}
+		}			
+	}
+
+}
+
 
 /**************************************************************
  * internal helper functions
