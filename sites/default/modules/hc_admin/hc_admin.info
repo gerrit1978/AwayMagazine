@@ -1,0 +1,5 @@
+name             = Administration Tools
+description      = Provides admin related functionality for (A)WAY Magazine
+core             = 7.x
+version          = 7.x-1.0
+package          = HedgeComm

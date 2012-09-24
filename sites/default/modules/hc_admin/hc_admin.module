@@ -1,0 +1,44 @@
+<?php
+
+
+/**
+ * Implements hook_menu
+ */
+function hc_admin_menu() {
+  $items['admin/content/manage'] = array(
+    'title' => t('Manage content'),
+    'page callback' => '_hc_admin_overview',
+    'access arguments' => array('administer nodes'),
+  );
+  
+  return $items;
+}
+
+
+
+
+/**
+ * Rendering the overview page
+ */
+function _hc_admin_overview() {
+
+	$list = array(
+		l("@Your Service Companies", 'admin/content/manage/-your-service-company'),
+		l("@Your Service Offers", 'admin/content/manage/offer'),
+		l("Agenda Entries", 'admin/content/manage/agenda'),		
+		l("Banners", 'admin/content/manage/banner'),
+		l("Static Pages", 'admin/content/manage/page'),
+		l("Carrousel Items", 'admin/content/manage/carrousel'),
+		l("Classified Ads", 'admin/content/manage/classified-ads'),
+		l("Events", 'admin/content/manage/event'),
+		l("Organisations", 'admin/content/manage/organisation'),
+		l("Magazine Articles", 'admin/content/manage/magazine-article'),
+		l("Magazine Cover Images (Issuu)", 'admin/content/manage/magazine-cover'),
+	);
+	$output = array();
+
+	$output['#markup'] = '<p>Click on a link below to manage the content of that type.</p>'
+		. theme('item_list', array('items' => $list));
+	
+	return $output;
+}
