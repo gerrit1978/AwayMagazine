@@ -29,6 +29,10 @@ h2 {
   border-top: 3px solid #00bde4;
 }
 
+#block-system-main {
+  margin-bottom: 20px;
+}
+
 form.webform-client-form .form-item .form-text,
 form.webform-client-form .form-item .form-textarea {
   width: 100%;
@@ -84,6 +88,13 @@ a.btn-large {
 
 .calendar-calendar td.multi-day a {
   color: white;
+}
+
+td.has-events a {
+  background: #00BDE4;
+  color: white;
+  text-decoration: none;
+	padding: 0 5px;
 }
 
 
@@ -940,10 +951,21 @@ body.front h1#page-title {
 }
 
 
+
+
 /** SOCIAL MEDIA BUTTONS ON EVERY PAGE **/
 #block-hc-sm-hc-sm {
 }
 
 #block-hc-sm-hc-sm .facebook, #block-hc-sm-hc-sm .google, #block-hc-sm-hc-sm .twitter {
   float: left;
+}
+
+/**  IMAGES FOR AGENDA - EVENTS - SCHOOLS - AT YOUR SERVICE **/
+body.node-type--your-service-company .field-name-field-image, 
+body.node-type-agenda .field-name-field-image, 
+body.node-type-event .field-name-field-image { 
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
