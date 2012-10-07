@@ -4,7 +4,7 @@ function hedgecomm_alpha_preprocess_views_view_fields(&$vars) {
 	$view_name = $vars['view']->name;
 
 
-	if ($view_name == 'agenda' || $view_name == 'events') {
+	if ($view_name == 'events') {
 		foreach ($vars['fields'] as $delta => $field) {
 			if ($delta == "nothing") {
 			  $row = $vars['row'];
@@ -17,6 +17,22 @@ function hedgecomm_alpha_preprocess_views_view_fields(&$vars) {
 			}
 		}
 	}
+
+
+	if ($view_name == 'agenda') {
+		foreach ($vars['fields'] as $delta => $field) {
+			if ($delta == "nothing") {
+			  $row = $vars['row'];
+				$nid = $row->nid;
+				$node = node_load($nid);
+				$date_field = field_get_items('node', $node, 'field_agenda_date');
+				$date = isset($date_field[0]['value2']) ? $date_field[0]['value2'] : $date_field[0]['value'];
+				$dateOutput = "<span class='day'>" . date("d", strtotime($date)) . "</span>" . date("M", strtotime($date));
+				$vars['fields'][$delta]->content = $dateOutput;
+			}
+		}
+	}
+
 	
 	
 	if ($view_name == 'magazine_articles') {
