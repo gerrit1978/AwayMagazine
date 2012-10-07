@@ -1,9 +1,12 @@
 /* This file will hold styles that are loaded using the same media query as the wide grid. */
 
-
 /** BLOCK IN THE SPOTLIGHT **/
 .block-in-the-spotlight-block {
   margin-top: 30px;
+}
+
+#logo img {
+  width: auto;
 }
 
 

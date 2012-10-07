@@ -2,6 +2,11 @@
 /* If you are using the default media queries provided by Omega, these styles will also
  *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
 
+#logo img { 
+	width: 280px; 
+	overflow: hidden;
+}
+
 /** Region Header **/
 .region-header-first {
   margin-right: 0 !important;
