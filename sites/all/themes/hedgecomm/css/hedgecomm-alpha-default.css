@@ -222,3 +222,13 @@ form.webform-client-form #edit-actions {
 .page-user .create-account h2 {
   font-size: 2.769em;
 }
+
+.page-user .block-11 {
+  margin-top: 30px;
+  border: 1px solid #444;
+  padding: 1em;
+}
+
+.page-user .block-11 ul {
+  margin-left: 30px;
+}

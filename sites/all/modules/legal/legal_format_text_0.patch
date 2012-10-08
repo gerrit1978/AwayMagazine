@@ -1,0 +1,143 @@
+diff --git a/htdocs/sites/all/modules/legal/legal.admin.inc b/htdocs/sites/all/modules/legal/legal.admin.inc
+index f4d82d1..d161b31 100644
+--- a/htdocs/sites/all/modules/legal/legal.admin.inc
++++ b/htdocs/sites/all/modules/legal/legal.admin.inc
+@@ -30,10 +30,11 @@ function legal_administration($form_state) {
+   $form = array_merge($form, legal_display_fields($conditions));
+ 
+   $form['conditions'] = array(
+-    '#type' => 'textarea',
++    '#type' => 'text_format',
+     '#title' => t('Terms & Conditions'),
+     '#default_value' => $conditions['conditions'],
+     '#description' => t('Your Terms & Conditions'),
++    '#format' => isset ($conditions['conditions_format']) ? $conditions['conditions_format'] : NULL,
+     '#required' => TRUE,
+   );
+   
+@@ -147,16 +148,28 @@ function legal_administration($form_state) {
+   return $form;
+ }
+ 
++function legal_administration_validate($form, &$form_state) {
++  $one = 1;
++  $format = filter_format_load($form_state['values']['conditions']['format']);
++  if (!is_object($format)) {
++    form_set_error('conditions', t('Unrecognized Format'));
++  }
++  if (!filter_access($format)) {
++    form_set_error('conditions', t('Format Access Denied'));
++  }
++}
++
+ /**
+  *  After build function for legal_administration form.
+  */
+ function legal_preview($form, $form_values) {
++  $preview = check_markup($form_values['values']['conditions']['value'], $form_values['values']['conditions']['format']);
+ 
+   switch ($form['display']['#value']) {
+     case 1: // Scroll box (CSS).
+     case 2: // HTML.
+       $form['legal']['conditions'] = array(
+-        '#markup' => filter_xss_admin($form['conditions']['#value']),
++        '#markup' => $preview,
+       );
+       $form['legal']['legal_accept']['#title'] = t('<strong>Accept</strong> Terms & Conditions of Use');
+       break;
+@@ -168,14 +181,15 @@ function legal_preview($form, $form_values) {
+       break;
+     default: // Scroll box (HTML).
+       $form['legal']['conditions'] = array(
+-                     '#id' => 'preview',
+-                     '#name' => 'preview',
+-                     '#type' => 'textarea',
+-                     '#title' => t('Terms & Conditions'),
+-                     '#value' => $form['conditions']['#value'],
+-                     '#parents' => array('legal'),
+-                     '#rows' => 10,
+-                     '#attributes' => array('readonly' => 'readonly'),
++        '#id' => 'preview',
++        '#name' => 'preview',
++        '#type' => 'text_format',
++        '#title' => t('Terms & Conditions'),
++        '#value' => $preview,
++        '#parents' => array('legal'),
++        '#rows' => 10,
++        '#attributes' => array('readonly' => 'readonly'),
++        '#format' => isset($form_values['values']['conditions']['format']) ? $form_values['values']['conditions']['format'] : null,
+       );
+ 
+       $form['legal']['legal_accept']['#title'] = t('<strong>Accept</strong> Terms & Conditions of Use');
+@@ -257,7 +271,8 @@ function legal_administration_submit($form, &$form_state) {
+         'version' => $version['version'],
+         'revision' => $version['revision'],
+         'language' => $values['language'],
+-        'conditions' => $values['conditions'],
++        'conditions' => $values['conditions']['value'],
++        'conditions_format' => $values['conditions']['format'],
+         'date' => time(),
+         'extras' => serialize($values['extras']),
+         'changes' => $values['changes'],
+diff --git a/htdocs/sites/all/modules/legal/legal.install b/htdocs/sites/all/modules/legal/legal.install
+index fcdce04..d1bd8d8 100644
+--- a/htdocs/sites/all/modules/legal/legal.install
++++ b/htdocs/sites/all/modules/legal/legal.install
+@@ -23,6 +23,7 @@ function legal_schema() {
+           'default' => ''
+         ),
+       'conditions'  => array('type' => 'text', 'size' => 'big', 'not null' => TRUE),
++      'conditions_format' => array('type' => 'varchar', 'length' => 255),
+       'date'        => array('type' => 'int', 'unsigned' => FALSE, 'not null' => TRUE, 'default' => 0, 'disp-width' => 11),
+       'extras'      => array('type' => 'text'),
+       'changes'     => array('type' => 'text'),
+@@ -64,4 +65,8 @@ function legal_uninstall() {
+  */
+ function legal_update_last_removed() {
+   return 6003;
++}
++
++function legal_update_7011(&$sandbox) {
++  db_add_field('legal_conditions', 'conditions_format', array('type' => 'varchar', 'length' => 255));
+ }
+\ No newline at end of file
+diff --git a/htdocs/sites/all/modules/legal/legal.module b/htdocs/sites/all/modules/legal/legal.module
+index fa6b482..7e26c21 100644
+--- a/htdocs/sites/all/modules/legal/legal.module
++++ b/htdocs/sites/all/modules/legal/legal.module
+@@ -144,7 +144,7 @@ function legal_display_fields($conditions) {
+     case 1: // Scroll box (CSS).
+     case 2: // HTML.
+       $form['legal']['conditions'] = array(
+-        '#markup' => filter_xss_admin($conditions['conditions']),
++        '#markup' => check_markup($conditions['conditions'], $conditions['conditions_format']),
+       );
+       break;
+ 
+@@ -157,13 +157,14 @@ function legal_display_fields($conditions) {
+ 
+     default: // Scroll box (HTML).
+       $form['legal']['conditions'] = array(
+-        '#type' => 'textarea',
++        '#type' => 'text_format',
+         '#title' => t('Terms & Conditions'),
+-        '#default_value' => $conditions['conditions'],
+-        '#value' => $conditions['conditions'],
++        '#default_value' => check_markup($conditions['conditions'], $conditions['conditions_format']),
++        '#value' => check_markup($conditions['conditions'], $conditions['conditions_format']),
+         '#rows' => 10,
+         '#weight' => 0,
+         '#attributes' => array('readonly' => 'readonly'),
++        '#format' => isset($conditions['conditions_format']) ? $conditions['conditions_format'] : null,
+       );
+   }
+ 
+@@ -673,7 +674,7 @@ function legal_save_accept($version, $revision, $language, $uid) {
+ }
+ 
+ function legal_get_conditions($language = NULL) {
+-  $keys = array('tc_id', 'version', 'revision', 'language', 'conditions', 'date', 'extras', 'changes');
++  $keys = array('tc_id', 'version', 'revision', 'language', 'conditions', 'date', 'extras', 'changes', 'conditions_format');
+ 
+   if (!empty($language)) {
+     $result = db_select('legal_conditions', 'lc')

@@ -32,10 +32,18 @@ function hc_user_form_alter(&$form, &$form_state, $form_id) {
     $form['actions']['#suffix'] .= '</div>';
   }
   if ($form_id == 'user_register_form') {
+    // "registration info" block
+    $block = block_load('block', '11');
+    $render_array = _block_get_renderable_array(_block_render_blocks(array($block)));
+    $output = render($render_array);
+  
     $form['account']['name']['#prefix'] = '<div id="' . $form_id . '">';
     $form['account']['name']['#prefix'] .= '<h1>' . t('Register') . '</h1>';
+    // block
+    $form['account']['name']['#prefix'] .= $output;
+    
     $form['actions']['submit']['#suffix'] = '</div>';
-    $form['actions']['submit']['#suffix'] .= '<div class="back-to-login">' . l(t('Back to login'), 'user/login', array('attributes' => array('class' => 'login-account', 'title' => t('Sign in')))) . '</div>';
+    $form['actions']['submit']['#suffix'] .= '<div class="back-to-login">' . l(t('Back to login'), 'user/login', array('attributes' => array('class' => 'login-account', 'title' => t('Sign in')))) . '</div>';    
   }
   
 	if ($form_id == 'user_profile_form') {
