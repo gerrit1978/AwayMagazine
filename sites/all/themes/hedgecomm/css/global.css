@@ -638,6 +638,10 @@ body.front h1#page-title {
 
 
 /** BANNERS **/
+.block-banners-block-1 {
+  text-align: right;
+}
+
 .region-sidebar-second .view-banners ul {
   margin: 0;
   list-style: none;

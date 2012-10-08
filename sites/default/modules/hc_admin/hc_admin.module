@@ -34,6 +34,7 @@ function _hc_admin_overview() {
 		l("Organisations", 'admin/content/manage/organisation'),
 		l("Magazine Articles", 'admin/content/manage/magazine-article'),
 		l("Magazine Cover Images (Issuu)", 'admin/content/manage/magazine-cover'),
+		l("Users", 'admin/users/manage'),
 	);
 	$output = array();
 

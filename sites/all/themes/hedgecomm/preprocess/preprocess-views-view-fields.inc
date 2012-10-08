@@ -11,7 +11,7 @@ function hedgecomm_alpha_preprocess_views_view_fields(&$vars) {
 				$nid = $row->nid;
 				$node = node_load($nid);
 				$date_field = field_get_items('node', $node, 'field_date');
-				$date = $date_field[0]['value'];
+				$date = isset($date_field[0]['value2']) ? $date_field[0]['value2'] : $date_field[0]['value'];
 				$dateOutput = "<span class='day'>" . date("d", strtotime($date)) . "</span>" . date("M", strtotime($date));
 				$vars['fields'][$delta]->content = $dateOutput;
 			}

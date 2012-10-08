@@ -1,0 +1,21 @@
+.block-hc-mostpopular {
+	text-align: left;
+}
+
+.block-hc-mostpopular h2.block-title {
+  font-size: 2em;
+  margin-bottom: 10px;  
+}
+
+.block-hc-mostpopular ul li {
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+.block-hc-mostpopular ul li a, .block-hc-mostpopular ul li a.active {
+  color: #00bde4
+}
+
+.block-hc-mostpopular ul li a:hover {
+  color: black;
+}

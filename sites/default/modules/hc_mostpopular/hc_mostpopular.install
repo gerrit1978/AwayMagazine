@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * Implements hook_schema
+ */
+function hc_mostpopular_schema() {
+
+  $schema = array();
+  
+  $schema['hc_mostpopular'] = array(
+    'fields' => array(
+      'nid' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'unsigned' => TRUE,
+      ),
+    ),
+    'primary key' => array('nid')
+  );
+  
+  return $schema;
+}

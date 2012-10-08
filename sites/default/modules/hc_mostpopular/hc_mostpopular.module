@@ -1,0 +1,94 @@
+<?php
+
+/**
+ * Implements hook_init
+ */
+function hc_mostpopular_init() {
+  $path = drupal_get_path('module', 'hc_mostpopular');
+  drupal_add_css($path . '/hc_mostpopular.css');
+}
+
+
+/**
+ * Implements hook_cron
+ */
+function hc_mostpopular_cron() {
+
+	$nodes = array();
+
+  // get a list of most accessed nodes from {node_counter} table 
+  $result = db_query("SELECT nc.nid, n.type FROM {node_counter} nc, {node} n WHERE n.nid = nc.nid ORDER BY totalcount DESC;");
+  foreach ($result as $row) {
+    if ($row->type == 'magazine_article' || $row->type == 'event') {
+      $nodes[] = $row->nid;
+    }
+  }
+
+	$result = db_truncate('hc_mostpopular')->execute();
+
+
+	foreach ($nodes as $nid) {
+	  db_insert('hc_mostpopular')
+	  ->fields(array('nid' => $nid))
+	  ->execute();
+	}
+
+}
+
+
+
+/**
+ * Implements hook_block_info
+ */
+function hc_mostpopular_block_info() {
+  $blocks = array();
+  
+  $blocks['most_popular_article_event'] = array(
+    'info' => t('Most popular articles and events'),
+  );
+  
+  return $blocks;
+  
+}
+
+
+/**
+ * Implements hook_block_view
+ */
+function hc_mostpopular_block_view($delta = "") {
+  $block = array();
+  
+	switch ($delta) {
+	  case 'most_popular_article_event': 
+	    $block['subject'] = t('Most Popular');
+	    $block['content'] = _hc_mostpopular_render_block();
+	    break;
+	}
+	
+	return $block;
+}
+
+
+
+/**
+ * Render block
+ */
+function _hc_mostpopular_render_block() {
+  $result = db_query("SELECT * FROM {hc_mostpopular};");
+  $i = 0;
+  $list = array();
+  foreach ($result as $row) {
+    if ($i <= 5) {
+	    $nid = $row->nid;
+	    $node = node_load($nid);
+	    $title = $node->title;
+	    $list[] = l($title, 'node/' . $nid);
+	    $i++;
+    }
+  }
+  
+  $output = theme('item_list', array('items' => $list));
+  
+  return $output;
+  
+}
