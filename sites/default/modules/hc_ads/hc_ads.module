@@ -71,6 +71,18 @@ function hc_ads_node_insert($node) {
 
 
 /**
+ * Implements hook_node_delete
+ */
+function hc_ads_node_delete($node) {
+  if ($node->type == 'banner') {
+    db_delete('hc_banner_stats')
+    ->condition('nid', $node->nid)
+    ->execute();
+  }
+}
+
+
+/**
  * Implements template_preprocess_field
  */
 function hc_ads_preprocess_views_view_fields(&$vars) {
