@@ -58,6 +58,7 @@ html, body {
 
 /** HOMEPAGE EVENTS & AGENDA BLOCK **/
 .block-events-block ul li, .block-agenda-block ul li {
+  height: 90px; overflow: hidden;
   margin-bottom: 35px;
 }
 
