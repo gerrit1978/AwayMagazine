@@ -785,6 +785,12 @@ body.front h1#page-title {
   text-transform: uppercase;
 }
 
+.view-offers .views-field-field-image {
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
 
 
 /** "MAGAZINE" PAGE **/
@@ -971,8 +977,14 @@ body.front h1#page-title {
 /**  IMAGES FOR AGENDA - EVENTS - SCHOOLS - AT YOUR SERVICE **/
 body.node-type--your-service-company .field-name-field-image, 
 body.node-type-agenda .field-name-field-image, 
-body.node-type-event .field-name-field-image { 
+body.node-type-event .field-name-field-image,
+body.node-type-organisation .field-name-field-image,
+body.node-type-offer .field-name-field-image { 
   float: left;
   margin-right: 20px;
   margin-bottom: 20px;
+}
+
+.block-hc-events-events-per-company h2.block-title {
+  font-size: 24px;
 }
